@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>For Cindy 💗</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@500;700&family=Nunito:wght@400;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    --bg: #fff7fa;
+    --bg-2: #ffe3ec;
+    --card: #ffffff;
+    --pink: #ff8fb1;
+    --pink-deep: #e2477f;
+    --ink: #6b1f42;
+    --ink-soft: #94506f;
+    --line: #ffc9da;
+    --shadow: 0 10px 30px rgba(226, 71, 127, .18);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #2a1020; --bg-2: #3b1730; --card: #3a1a2e;
+      --pink: #ff8fb1; --pink-deep: #ffb3cb;
+      --ink: #ffe6ef; --ink-soft: #f3bcd0; --line: #6a2e4c;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #2a1020; --bg-2: #3b1730; --card: #3a1a2e;
+    --pink: #ff8fb1; --pink-deep: #ffb3cb;
+    --ink: #ffe6ef; --ink-soft: #f3bcd0; --line: #6a2e4c;
+    --shadow: 0 10px 30px rgba(0,0,0,.35);
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { -webkit-text-size-adjust: 100%; }
+  button { touch-action: manipulation; }
+  img { max-width: 100%; }
+  body {
+    margin: 0; min-height: 100vh; min-height: 100dvh; overflow-x: hidden;
+    background:
+      radial-gradient(circle at 12% 8%, var(--bg-2) 0, transparent 40%),
+      radial-gradient(circle at 90% 90%, var(--bg-2) 0, transparent 45%),
+      var(--bg);
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: "Nunito", "Trebuchet MS", system-ui, sans-serif;
+    font-size: 1.05rem; line-height: 1.7;
+  }
+  h1, h2, h3 { font-family: "DynaPuff", "Comic Sans MS", "Trebuchet MS", sans-serif; font-weight: 700; line-height: 1.15; margin: 0; }
+  .script { font-family: "Caveat", "Segoe Script", cursive; font-weight: 600; }
+
+  /* nav */
+  header { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px)); display: flex; justify-content: center; pointer-events: none; }
+  nav { pointer-events: auto; display: flex; gap: 4px; padding: 5px; width: min(440px, 100%); background: var(--card); border: 2px solid var(--line); border-radius: 999px; box-shadow: var(--shadow); }
+  nav button {
+    flex: 1; min-height: 46px;
+    font: inherit; font-weight: 700; font-size: .95rem; color: var(--ink-soft);
+    background: transparent; border: 0; border-radius: 999px; padding: 8px 10px; cursor: pointer;
+    transition: background .2s, color .2s;
+  }
+  nav button[aria-current="page"] { background: var(--pink); color: #fff; }
+  button:focus-visible { outline: 3px solid var(--pink-deep); outline-offset: 2px; }
+
+  main { max-width: 980px; margin: 0 auto; padding: 8px 20px 130px; }
+  main section:not([hidden]) { animation: fadein .35s ease; }
+  @keyframes fadein { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  section[hidden] { display: none; }
+
+  /* HOME */
+  .hero { text-align: center; padding: clamp(28px, 8vh, 70px) 0 20px; min-height: calc(100dvh - 190px); position: relative; overflow: hidden; }
+  .hero .hi { font-size: clamp(1.4rem, 5.5vw, 1.9rem); color: var(--pink-deep); }
+  .hero h1 { font-size: clamp(3.6rem, 18vw, 8rem); color: var(--pink-deep); text-shadow: 4px 4px 0 var(--bg-2); letter-spacing: .01em; }
+  .hero p.sub { max-width: 30rem; margin: 14px auto 26px; color: var(--ink-soft); font-size: 1.15rem; }
+  .btn {
+    font: inherit; font-family: "DynaPuff", "Trebuchet MS", sans-serif; font-weight: 500; font-size: 1.05rem;
+    background: var(--pink-deep); color: #fff; border: 0; border-radius: 999px; padding: 16px 30px; min-height: 52px; cursor: pointer;
+    box-shadow: 0 6px 0 rgba(0,0,0,.12), var(--shadow); transition: transform .12s, box-shadow .12s;
+  }
+  :root[data-theme="dark"] .btn { color: #3a1a2e; }
+  .btn:active { transform: translateY(4px); box-shadow: 0 2px 0 rgba(0,0,0,.12); }
+  .heart-float { position: absolute; bottom: -30px; pointer-events: none; animation: rise linear forwards; opacity: 0; }
+  @keyframes rise {
+    0% { transform: translateY(0) rotate(-10deg) scale(.7); opacity: 0; }
+    15% { opacity: .9; }
+    100% { transform: translateY(-720px) rotate(14deg) scale(1.15); opacity: 0; }
+  }
+  .note-bubble {
+    margin: 34px auto 0; max-width: 34rem; min-height: 5.2rem; padding: 20px 24px;
+    background: var(--card); border: 2px dashed var(--pink); border-radius: 28px; color: var(--ink);
+    font-size: 1.2rem; box-shadow: var(--shadow);
+  }
+  .note-bubble.pop { animation: pop .35s ease; }
+  @keyframes pop { 0% { transform: scale(.94); } 60% { transform: scale(1.03); } 100% { transform: scale(1); } }
+
+  /* GALLERY */
+  .page-title { text-align: center; padding: 34px 0 6px; }
+  .page-title h2 { font-size: clamp(2rem, 7vw, 3rem); color: var(--pink-deep); }
+  .page-title p { color: var(--ink-soft); margin: 8px auto 0; max-width: 28rem; }
+  .polaroids { display: flex; flex-wrap: wrap; justify-content: center; gap: 38px 30px; padding: 40px 0 10px; }
+  .polaroid {
+    width: min(300px, 80vw); background: #fff; padding: 14px 14px 18px; border-radius: 10px;
+    box-shadow: var(--shadow); transition: transform .25s; position: relative;
+  }
+  .polaroid:nth-child(1) { transform: rotate(-3.5deg); }
+  .polaroid:nth-child(2) { transform: rotate(2deg) translateY(14px); }
+  .polaroid:nth-child(3) { transform: rotate(-1.5deg); }
+  @media (hover: hover) { .polaroid:hover { transform: rotate(0) scale(1.03); z-index: 2; } .aff:hover { transform: translateY(-4px) rotate(-.6deg); } }
+  .polaroid::before {
+    content: ""; position: absolute; top: -13px; left: 50%; width: 88px; height: 26px; margin-left: -44px;
+    background: rgba(255, 143, 177, .55); transform: rotate(-3deg); border-radius: 3px;
+  }
+  .slot {
+    width: 100%; aspect-ratio: 4/5; border-radius: 6px; overflow: hidden;
+    background: repeating-linear-gradient(45deg, #ffeef4, #ffeef4 12px, #ffe0eb 12px, #ffe0eb 24px);
+    display: flex; align-items: center; justify-content: center; text-align: center; position: relative;
+    border: 0; padding: 0; cursor: pointer; font: inherit; color: #b23a69;
+  }
+  .slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .slot .plus { font-family: "DynaPuff", sans-serif; font-size: 1rem; padding: 0 18px; }
+  .slot .plus b { display: block; font-size: 2.6rem; line-height: 1; margin-bottom: 6px; }
+  .caption { text-align: center; color: #a3416b; font-size: 1.6rem; margin-top: 12px; line-height: 1.1; }
+  .lightbox { position: fixed; inset: 0; z-index: 50; display: none; align-items: center; justify-content: center; padding: 20px; background: rgba(60, 10, 35, .78); }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 100%; max-height: 82dvh; border: 10px solid #fff; border-bottom-width: 34px; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+  .lightbox .x { position: absolute; top: calc(14px + env(safe-area-inset-top, 0px)); right: 14px; width: 48px; height: 48px; border-radius: 50%; border: 0; background: #fff; color: #e2477f; font-size: 1.5rem; cursor: pointer; }
+  .tip { text-align: center; color: var(--ink-soft); font-size: .92rem; margin-top: 34px; }
+
+  /* AFFIRMATIONS */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); gap: 18px; padding: 30px 0 8px; }
+  .aff {
+    font: inherit; text-align: left; color: var(--ink); cursor: pointer;
+    background: var(--card); border: 2px solid var(--line); border-radius: 26px 26px 26px 6px; padding: 22px 22px 24px;
+    box-shadow: var(--shadow); transition: transform .2s;
+  }
+  .aff:nth-child(even) { border-radius: 26px 26px 6px 26px; background: var(--bg-2); }
+  .aff .emoji { font-size: 1.7rem; display: block; margin-bottom: 6px; }
+  .aff h3 { font-size: 1.25rem; color: var(--pink-deep); margin-bottom: 6px; }
+  .aff p { margin: 0; color: var(--ink-soft); }
+  .aff:focus-visible { outline: 3px solid var(--pink-deep); outline-offset: 3px; }
+
+  .letter {
+    margin: 42px auto 0; max-width: 40rem; background: var(--card); border-radius: 18px; padding: 34px 30px 38px;
+    box-shadow: var(--shadow); border: 2px solid var(--line);
+    background-image: repeating-linear-gradient(transparent 0, transparent 33px, var(--line) 33px, var(--line) 34px);
+    background-color: var(--card); line-height: 34px;
+  }
+  .letter h3 { font-size: 1.6rem; color: var(--pink-deep); line-height: 1.3; margin-bottom: 10px; }
+  .letter p { margin: 0 0 34px; }
+  .letter .sign { font-size: 1.9rem; color: var(--pink-deep); margin: 0; line-height: 1.2; }
+
+  @media (max-width: 380px) {
+    main { padding-left: 14px; padding-right: 14px; }
+    .letter { padding: 26px 18px 30px; }
+    .note-bubble { padding: 16px 18px; font-size: 1.1rem; }
+  }
+  @media (min-width: 900px) { body { font-size: 1.12rem; } .cards { gap: 24px; } }
+  footer { text-align: center; padding: 10px 20px 40px; color: var(--ink-soft); font-size: .95rem; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    .heart-float { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav aria-label="Pages">
+    <button data-page="home" aria-current="page">💗 Hi</button>
+    <button data-page="photos">📸 Photos</button>
+    <button data-page="notes">🌸 For You</button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- PAGE 1 -->
+  <section id="home" aria-label="Welcome">
+    <div class="hero" id="hero">
+      <div class="hi script">this little corner of the internet is all yours,</div>
+      <h1>Cindy</h1>
+      <p class="sub">Pink, white, and a whole lot of love, made just for my queen. 👑</p>
+      <button class="btn" id="hugBtn" type="button">Tap for a little love 💗</button>
+      <div class="note-bubble" id="bubble" aria-live="polite">Go on, tap it. There's a note waiting for you.</div>
+    </div>
+  </section>
+
+  <!-- PAGE 2 -->
+  <section id="photos" aria-label="Photos" hidden>
+    <div class="page-title">
+      <h2>My favorite view</h2>
+      <p>Three pictures of the prettiest girl I know.</p>
+    </div>
+    <div class="polaroids">
+      <figure class="polaroid" style="margin:0">
+        <button class="slot" type="button" data-slot="1" aria-label="Add photo 1"><span class="plus"><b>+</b>Add photo</span></button>
+        <figcaption class="caption script">that smile 😊</figcaption>
+      </figure>
+      <figure class="polaroid" style="margin:0">
+        <button class="slot" type="button" data-slot="2" aria-label="Add photo 2"><span class="plus"><b>+</b>Add photo</span></button>
+        <figcaption class="caption script">pure sunshine ☀️</figcaption>
+      </figure>
+      <figure class="polaroid" style="margin:0">
+        <button class="slot" type="button" data-slot="3" aria-label="Add photo 3"><span class="plus"><b>+</b>Add photo</span></button>
+        <figcaption class="caption script">my whole heart 💕</figcaption>
+      </figure>
+    </div>
+    <input type="file" id="picker" accept="image/*" hidden>
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="Photo"><button class="x" type="button" id="lbClose" aria-label="Close">✕</button><img id="lbImg" alt=""></div>
+    <p class="tip" id="tip">Tap a photo to see it bigger.</p>
+  </section>
+
+  <!-- PAGE 3 -->
+  <section id="notes" aria-label="Words for Cindy" hidden>
+    <div class="page-title">
+      <h2>Things you should never forget</h2>
+      <p>Tap any card. They're all true.</p>
+    </div>
+    <div class="cards" id="cards"></div>
+
+    <article class="letter">
+      <h3>Dear Cindy,</h3>
+      <p>You are beautiful. Not only on the outside, though wow, that too, but in the way you laugh, the way you care, and the way you make an ordinary day feel softer.</p>
+      <p>You are the kind of person people are lucky to know. I'm lucky. Never doubt how special you are, how loved you are, or how much of my smile belongs to you.</p>
+      <p class="sign script">Forever your biggest fan 💗</p>
+    </article>
+  </section>
+
+</main>
+
+<footer>Made with love, just for you 🌸</footer>
+
+<script>
+(function () {
+  var pages = ["home", "photos", "notes"];
+  var navBtns = document.querySelectorAll("nav button");
+
+  function show(name) {
+    if (pages.indexOf(name) === -1) name = "home";
+    pages.forEach(function (p) { document.getElementById(p).hidden = (p !== name); });
+    navBtns.forEach(function (b) {
+      if (b.dataset.page === name) b.setAttribute("aria-current", "page");
+      else b.removeAttribute("aria-current");
+    });
+    window.scrollTo(0, 0);
+    try { history.replaceState(null, "", "#" + name); } catch (e) {}
+  }
+  navBtns.forEach(function (b) { b.addEventListener("click", function () { show(b.dataset.page); }); });
+  show((location.hash || "").replace("#", ""));
+  var tx = 0, ty = 0;
+  document.addEventListener("touchstart", function (e) { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, { passive: true });
+  document.addEventListener("touchend", function (e) {
+    if (document.getElementById("lightbox").classList.contains("open")) return;
+    var dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+    if (Math.abs(dx) < 70 || Math.abs(dy) > 50) return;
+    var cur = pages.findIndex(function (p) { return !document.getElementById(p).hidden; });
+    var next = cur + (dx < 0 ? 1 : -1);
+    if (next >= 0 && next < pages.length) show(pages[next]);
+  }, { passive: true });
+
+  /* ---------- love notes ---------- */
+  var notes = [
+    "You are the prettiest thing I've ever seen, Cindy. Inside and out.",
+    "Your smile could fix my worst day in one second.",
+    "You are enough, exactly as you are. More than enough.",
+    "Being loved by you is my favorite thing about being me.",
+    "You glow, and everyone around you feels it.",
+    "You are strong, you are kind, and you are so, so special.",
+    "Every version of you is my favorite version.",
+    "If I could pick anyone in the world, I would pick you again.",
+    "You deserve all the soft, sweet, wonderful things.",
+    "My queen, the world is prettier with you in it."
+  ];
+  var bubble = document.getElementById("bubble");
+  var last = -1;
+  function nextNote() {
+    var i; do { i = Math.floor(Math.random() * notes.length); } while (i === last);
+    last = i;
+    bubble.textContent = notes[i];
+    bubble.classList.remove("pop"); void bubble.offsetWidth; bubble.classList.add("pop");
+  }
+
+  /* ---------- floating hearts (only when tapped) ---------- */
+  var hero = document.getElementById("hero");
+  var layer = document.createElement("div");
+  layer.style.cssText = "position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:30";
+  document.body.appendChild(layer);
+  var glyphs = ["💗", "💕", "💖", "🌸", "🩷", "✨"];
+  function burst() {
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
+    for (var n = 0; n < 16; n++) {
+      var h = document.createElement("span");
+      h.className = "heart-float";
+      h.textContent = glyphs[Math.floor(Math.random() * glyphs.length)];
+      h.style.left = (Math.random() * 92 + 2) + "%"; h.style.position = "absolute"; h.style.bottom = "-30px";
+      h.style.fontSize = (1.2 + Math.random() * 1.8) + "rem";
+      h.style.animationDuration = (3.2 + Math.random() * 2.6) + "s";
+      h.style.animationDelay = (Math.random() * 0.9) + "s";
+      layer.appendChild(h);
+      (function (el) { setTimeout(function () { el.remove(); }, 7000); })(h);
+    }
+  }
+  document.getElementById("hugBtn").addEventListener("click", function () { nextNote(); burst(); });
+  setTimeout(burst, 500);
+
+  /* ---------- affirmation cards ---------- */
+  var affs = [
+    ["🌷", "You are beautiful", "Truly. Every single day, without trying."],
+    ["🎀", "You are loved", "More than you'll ever know, and I'll keep showing you."],
+    ["☀️", "You light up rooms", "The moment you walk in, everything feels warmer."],
+    ["👑", "You are my queen", "Now and always. No one else comes close."],
+    ["🌸", "You are enough", "Never smaller, never less. Just perfect as you are."],
+    ["💪", "You are strong", "Watching you handle life inspires me every day."],
+    ["🍓", "You are so sweet", "Your kindness is one of my favorite things about you."],
+    ["✨", "You are magic", "Not everyone gets to be this special. You are."]
+  ];
+  var cards = document.getElementById("cards");
+  affs.forEach(function (a) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "aff";
+    b.innerHTML = '<span class="emoji">' + a[0] + '</span><h3>' + a[1] + '</h3><p>' + a[2] + '</p>';
+    b.addEventListener("click", function () {
+      burst();
+      b.animate([{ transform: "scale(1)" }, { transform: "scale(1.07) rotate(-1.5deg)" }, { transform: "scale(1)" }], { duration: 350 });
+    });
+    cards.appendChild(b);
+  });
+
+  /* ---------- photos ---------- */
+  // Permanent photos (everyone who opens the link sees them) go here as image data.
+  var PHOTOS = ["", "", ""];
+  var lightbox = document.getElementById("lightbox"), lbImg = document.getElementById("lbImg");
+  function openBox(src) { lbImg.src = src; lightbox.classList.add("open"); }
+  function closeBox() { lightbox.classList.remove("open"); }
+  lightbox.addEventListener("click", closeBox);
+  document.getElementById("lbClose").addEventListener("click", closeBox);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeBox(); });
+
+  /* ---------- photo slots (fallback: saved in this browser) ---------- */
+  var picker = document.getElementById("picker");
+  var activeSlot = null;
+
+  function paint(slot, dataUrl) {
+    var btn = document.querySelector('.slot[data-slot="' + slot + '"]');
+    btn.innerHTML = "";
+    var img = document.createElement("img");
+    img.src = dataUrl; img.alt = "Cindy, photo " + slot;
+    btn.appendChild(img);
+  }
+  var anyPermanent = PHOTOS.some(function (p) { return !!p; });
+  if (anyPermanent) document.getElementById("tip").textContent = "Tap a photo to see it bigger.";
+  else document.getElementById("tip").textContent = "Tap a frame to choose a photo. Tap a photo again to see it bigger.";
+  PHOTOS.forEach(function (p, i) { if (p) paint(i + 1, p); });
+  [1, 2, 3].forEach(function (n) {
+    if (PHOTOS[n - 1]) return;
+    try { var saved = localStorage.getItem("cindy-photo-" + n); if (saved) paint(n, saved); } catch (e) {}
+  });
+
+  document.querySelectorAll(".slot").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var im = b.querySelector("img");
+      if (im) { openBox(im.src); return; }
+      activeSlot = b.dataset.slot; picker.value = ""; picker.click();
+    });
+  });
+
+  picker.addEventListener("change", function () {
+    var file = picker.files && picker.files[0];
+    if (!file || !activeSlot) return;
+    var slot = activeSlot;
+    var reader = new FileReader();
+    reader.onload = function () {
+      var img = new Image();
+      img.onload = function () {
+        var max = 900, w = img.width, h = img.height, s = Math.min(1, max / Math.max(w, h));
+        var c = document.createElement("canvas");
+        c.width = Math.round(w * s); c.height = Math.round(h * s);
+        c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+        var url = c.toDataURL("image/jpeg", 0.82);
+        paint(slot, url);
+        try { localStorage.setItem("cindy-photo-" + slot, url); } catch (e) {}
+      };
+      img.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+})();
+</script>
+</body>
+</html>
